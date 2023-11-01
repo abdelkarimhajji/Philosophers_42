@@ -6,7 +6,7 @@
 /*   By: ahajji <ahajji@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 11:59:58 by ahajji            #+#    #+#             */
-/*   Updated: 2023/10/13 22:15:16 by ahajji           ###   ########.fr       */
+/*   Updated: 2023/10/13 22:24:02 by ahajji           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void	taken_fork_eat(t_philo *philo)
 	pthread_mutex_lock(&philo->data->forks[philo->id % philo->data->n_philo]);
 	pthread_mutex_lock(&philo->data->mutx2);
 	if (philo->data->death != 1)
-		printf("%lld %d has taken a fork \n", get_time() - philo->data->start,
+		printf("%lld %d has taken a fork\n", get_time() - philo->data->start,
 			philo->id);
 	pthread_mutex_unlock(&philo->data->mutx2);
 	pthread_mutex_lock(&philo->data->mutx2);
